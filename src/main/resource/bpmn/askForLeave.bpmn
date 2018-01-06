@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:tns="http://www.activiti.org/test" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" expressionLanguage="http://www.w3.org/1999/XPath" id="m1515229741402" name="" targetNamespace="http://www.activiti.org/test" typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <process id="ask_for_leave" isClosed="false" isExecutable="true" name="中文" processType="None">
+    <startEvent id="start_point"/>
+    <userTask activiti:exclusive="true" id="employee_application" name="员工申请"/>
+    <sequenceFlow id="_4" sourceRef="start_point" targetRef="employee_application"/>
+    <userTask activiti:exclusive="true" id="manager_approval" name="经理审批"/>
+    <sequenceFlow id="_6" sourceRef="employee_application" targetRef="manager_approval"/>
+    <endEvent id="end_point"/>
+    <sequenceFlow id="_8" sourceRef="manager_approval" targetRef="end_point"/>
+  </process>
+  <bpmndi:BPMNDiagram documentation="background=#3C3F41;count=1;horizontalcount=1;orientation=0;width=842.4;height=1195.2;imageableWidth=832.4;imageableHeight=1185.2;imageableX=5.0;imageableY=5.0" id="Diagram-_1" name="New Diagram">
+    <bpmndi:BPMNPlane bpmnElement="ask_for_leave">
+      <bpmndi:BPMNShape bpmnElement="start_point" id="Shape-start_point">
+        <omgdc:Bounds height="32.0" width="32.0" x="65.0" y="75.0"/>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="32.0" width="32.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="employee_application" id="Shape-employee_application">
+        <omgdc:Bounds height="55.0" width="85.0" x="40.0" y="200.0"/>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="55.0" width="85.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="manager_approval" id="Shape-manager_approval">
+        <omgdc:Bounds height="55.0" width="85.0" x="35.0" y="295.0"/>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="55.0" width="85.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="end_point" id="Shape-end_point">
+        <omgdc:Bounds height="32.0" width="32.0" x="60.0" y="420.0"/>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="32.0" width="32.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_4" id="BPMNEdge__4" sourceElement="start_point" targetElement="employee_application">
+        <omgdi:waypoint x="81.0" y="107.0"/>
+        <omgdi:waypoint x="81.0" y="200.0"/>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_6" id="BPMNEdge__6" sourceElement="employee_application" targetElement="manager_approval">
+        <omgdi:waypoint x="80.0" y="255.0"/>
+        <omgdi:waypoint x="80.0" y="295.0"/>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_8" id="BPMNEdge__8" sourceElement="manager_approval" targetElement="end_point">
+        <omgdi:waypoint x="76.0" y="350.0"/>
+        <omgdi:waypoint x="76.0" y="420.0"/>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>
